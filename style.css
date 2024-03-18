@@ -1,0 +1,284 @@
+/* 
+Opacity - 0.4
+
+
+colors 
+
+- #FCA424
+- #0DD39D
+- #1A1A1A
+- #CDCDCD
+- #FEFEFE
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1200px;
+}
+
+.container {
+  width: 1000px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(img/mountain.jpg);
+  background-position: contain;
+  background-size: cover;
+  padding: 24px 32px;
+  padding-bottom: 4px;
+  color: #fefefe;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+.logo {
+}
+
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.need-help-btn {
+  opacity: 0.7;
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: #fefefe;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.notification-btn {
+  background: none;
+  border: none;
+}
+
+.icon-notify {
+  width: 22px;
+  height: 22px;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-btn {
+  height: 24px;
+  border-radius: 50%;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer {
+  display: flex;
+  gap: 257px;
+}
+
+.customer-img {
+  position: relative;
+}
+
+.customer-img img {
+  position: absolute;
+  width: 120px;
+  margin-top: 69px;
+  margin-left: 59px;
+  transform: scale(2);
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.customer-name {
+  font-size: 24px;
+}
+
+.customer-data {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.customer-data span {
+  opacity: 0.5;
+}
+
+.aside-div{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.camera{
+  color: #fefefe;
+  align-self: flex-end;
+  justify-self: end;
+  padding: 0 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+
+  opacity: 0.5;
+}
+
+.aside-data {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(closest-side, #ffffff 79%, transparent 80% 100%),
+    conic-gradient(rgba(255, 255, 255, 0.382) 25%, #fca424 0);    
+}
+
+.additional-info {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-3 {
+  font-size: 16px;
+}
+
+.additional-info p:nth-child(2){
+  color: #CDCDCD;
+}
+
+.btn-complete {
+  text-transform: uppercase;
+  padding: 4px 8px;
+  background-color: #fca424;
+  border: none;
+  color: #fefefe;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: auto;
+  display: inline-block;
+  align-self: flex-end;
+  margin-right: auto;
+}
+
+/* Main body / Main */
+.main-body{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* padding:0 32px; */
+}
+
+.side-bar{
+  padding-top: 68px;
+  padding-left: 32px;
+  padding-right: 12px;
+  grid-row: 1/4;
+  box-shadow: inset -1.8px 0 0 rgba(205, 205, 205, 0.5);
+
+}
+/* Body nav */
+.body-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.body-nav{
+  grid-column: 2/-1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #CDCDCD;
+  text-transform: uppercase;
+  /* border-bottom: 2px solid #CDCDCD; */
+  box-shadow: inset 0 -1.8px 0 rgba(205, 205, 205, 0.5);
+  padding-right: 32px;
+}
+
+.body-nav-element,
+.body-nav-element-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  padding: 8px;  
+  padding-left: 8px; 
+  padding-top: 0;
+  /* margin-top: 8px; */
+  /* padding-bottom: 0; */
+  font-weight: 600;
+}
+
+.body-nav-element-list{
+  padding-bottom: 0;
+  margin-top: 8px;
+}
+
+.clam-btn{
+  text-transform: uppercase;
+  background: none;
+  background-color: #0DD39D;
+  border-radius: 3px;
+  border: none;
+  padding: 4px 8px;
+  color: #fefefe;
+  font-size: 12px;
+}
+
+.body-nav-element.active-nav{
+  color: #1A1A1A;
+  border-bottom: 2px solid #fca424;
+}
+
+.home{
+  padding: 0 4px 0 0 ;
+}
+
+/* body head cards */
+.body-cards{
+  /* background-color: aqua; */
+  grid-column: 2/-1;
+  
+}
+
+.card{
+  /* background-color: blue; */
+}
+
+/* body cards */
+.body-content{
+  background-color: orange;
+  grid-column: 2/-2;
+
+}
+
+.activity-sidebar{
+  background-color: blueviolet;
+  columns: 3/-1;
+}
