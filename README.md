@@ -6,7 +6,7 @@
 The project requires you to create a web page that matches the provided design template. The design template consists of dashboard layout. Your task is to replicate the design as accurately as possible within the given time for desktop screen only.
 
 **color palette**
-
+ 
 - #FCA424
 - #0DD39D
 - #1A1A1A
