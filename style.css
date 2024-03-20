@@ -23,12 +23,21 @@ box-shadow: inset 0 -1.8px 0 rgba(205, 205, 205, 0.5);
 }
 
 body {
+  background-image: url("img/BG.png");
+  font-family: sans-serif;
+  background-size: cover;
   /* width: 1200px; */
+  height: 100vh;
+  /* overflow: hidden; */
+  padding: 32px 0;
+  z-index: -3;
 }
 
 .container {
+  background-color: #fff;
   width: 1000px;
-  margin: 32px auto;
+  margin: 0 auto;
+  /* margin-top: 12px; */
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
@@ -39,7 +48,7 @@ header {
     url(img/mountain.jpg);
   background-position: contain;
   background-size: cover;
-  padding: 24px 32px;
+  padding: 14px 32px;
   padding-bottom: 4px;
   color: #fefefe;
 }
@@ -48,10 +57,11 @@ header {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 
 .logo {
+  font-size: 14px;
 }
 
 .nav-btn {
@@ -63,7 +73,7 @@ header {
 
 .need-help-btn {
   opacity: 0.7;
-  font-size: 12px;
+  font-size: 8px;
   background: none;
   border: none;
   color: #fefefe;
@@ -81,7 +91,7 @@ header {
 .icon-notify {
   width: 22px;
   height: 22px;
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .profile-btn {
@@ -96,7 +106,7 @@ header {
 
 .customer {
   display: flex;
-  gap: 257px;
+  gap: 200px;
 }
 
 .customer-img {
@@ -105,22 +115,25 @@ header {
 
 .customer-img img {
   position: absolute;
-  width: 120px;
-  margin-top: 69px;
-  margin-left: 59px;
+  width: 94px;
+  top: 53px;
+  left: 45px;
+  /* margin-left: 53px; */
   transform: scale(2);
   border-radius: 2px;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+  /* transform: translate(10px, 10px); */
 }
 
 .customer-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .customer-name {
   font-size: 24px;
+  margin-bottom: 6px;
 }
 
 .customer-data {
@@ -149,20 +162,67 @@ header {
   opacity: 0.5;
 }
 
+.icon-cam {
+  transform: translate(0px, 2px);
+}
+
 .aside-data {
   display: flex;
-  gap: 24px;
-  padding: 24px;
+  gap: 12px;
+  padding: 12px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
-.progress-bar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: radial-gradient(closest-side, #ffffff 79%, transparent 80% 100%),
-    conic-gradient(rgba(255, 255, 255, 0.382) 25%, #fca424 0);
+/* progress bar test  */
+/* Create a container using CSS properties */
+.p-container {
+  top: 30%;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+/* Apply CSS properties to ui-widgets class */
+.ui-widgets {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3rem;
+  border: 5px solid #fca424;
+  box-shadow: inset 0 0 7px grey;
+  border-right-color: rgba(205, 205, 205, 0.4);
+  border-bottom-color: #fca424;
+  text-align: center;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+}
+
+/* Apply css properties to ui-widgets class 
+  and ui-values class*/
+  .ui-widgets .ui-values {
+    display: block;
+    top: 5px;
+    position: absolute;
+    left: 5px;
+    right: 0;
+    font-weight: 700;
+    font-size: 12px;
+    transform: rotate(45deg);
+    background-color: rgba(205, 205, 205, 0.4);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.ui-values span {
+  position: absolute;
+  top: 21px;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 .additional-info {
@@ -172,7 +232,7 @@ header {
 }
 
 .heading-3 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .additional-info p:nth-child(2) {
@@ -181,7 +241,7 @@ header {
 
 .btn-complete {
   text-transform: uppercase;
-  padding: 4px 8px;
+  padding: 6px 12px;
   background-color: #fca424;
   border: none;
   color: #fefefe;
@@ -196,7 +256,7 @@ header {
 /* Main body / Main */
 .main-body {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   /* padding:0 32px; */
 }
 
@@ -208,7 +268,7 @@ header {
 /* sidebar */
 
 .side-bar {
-  padding: 68px 12px 32px 32px;
+  padding: 48px 12px 32px 32px;
   box-shadow: inset -1.8px 0 0 rgba(205, 205, 205, 0.5);
 }
 
@@ -219,7 +279,7 @@ header {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
-  padding: 12px 0;
+  padding: 12px 0 6px 0;
   color: #1a1a1a;
   box-shadow: inset 0 -1.8px 0 rgba(205, 205, 205, 0.5);
 }
@@ -229,7 +289,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 12px 0;
+  padding: 12px 0 0 0;
 }
 
 .family {
@@ -245,34 +305,40 @@ header {
 .family-img {
   display: flex;
   gap: 12px;
-  padding: 8px 0;
+  padding: 4px 0;
 }
 
 .family-img img {
-  height: 48px;
+  height: 32px;
   border-radius: 50%;
 }
 
 .detail {
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
   font-weight: 500;
+  gap: 2px;
 }
 
 .detail-head {
+  font-weight: 600;
   text-transform: uppercase;
   color: #cdcdcd;
 }
 
 .detail-data {
-  color: #1a1a1a;
+    font-weight: 600;
+    font-size: 10px;
+    color: #1a1a1a;
 }
 
 .my-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 
-  padding: 12px 0;
+  padding: 12px 0 0 0;
 }
 
 /* Body content */
@@ -286,13 +352,12 @@ header {
 
   row-gap: 12px;
   column-gap: 12px;
-
 }
 
 /* Body nav */
 .body-nav {
   justify-content: space-between;
-  margin: 18px 0 18px 0;
+  margin: 18px 0 8px 0;
   padding: 0 32px 0 12px; /* done this so that line could reach end of the page ! and can't assign all margin to padding otherwise the active state will mesed up*/
   grid-column: 2/-1;
   display: flex;
@@ -313,15 +378,12 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 10px;
-  padding: 0 0 18px 0 ;
+  padding: 0 0 18px 0;
   font-weight: 600;
 }
-.body-nav-element-list{
-  gap: 12px;
-}
 .body-nav-element-list {
+  gap: 12px;
   padding-bottom: 0;
-  margin-top: 8px;
 }
 
 .clam-btn {
@@ -352,11 +414,11 @@ header {
   /* gap: 12px; */
 }
 
-.card:last-child{
+.card:last-child {
   margin-right: 0;
 }
 
-.card:first-child{
+.card:first-child {
   margin-left: 12px;
 }
 
@@ -373,20 +435,21 @@ header {
 }
 
 .card-counter {
+  font-family: "Dosis", sans-serif;
+
   font-size: 42px;
   display: flex;
   flex-direction: column;
   padding: 0 6px 0 4px;
 }
 
-.card-content{
+.card-content {
   padding-left: 6px;
   border-left: 1px solid #cdcdcd;
   display: flex;
   flex-direction: column;
 
   gap: 18px;
-
 }
 
 .card-title {
@@ -398,9 +461,8 @@ header {
 
 .card-images {
   display: flex;
-  
-  margin-top: auto;
 
+  margin-top: auto;
 }
 
 .card-images img {
@@ -408,7 +470,6 @@ header {
   border-radius: 50%;
   margin-right: -12px;
   border: 1px solid #c6c6c6;
-
 }
 
 .overlay-image {
@@ -434,14 +495,6 @@ header {
   transform: translate(10%, 10%);
 }
 
-/* activity-sidebar */
-.activity-sidebar {
-  /* background-color: blueviolet; */
-  columns: 3/-1;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
-  padding: 0 12px;
-}
-
 .body-main-content {
   grid-column: span 2;
 }
@@ -454,20 +507,21 @@ header {
 
 .data-card {
   display: flex;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
   /* width: 100%; */
   /* gap: 12px ; */
   margin: 0 0 0 12px;
 }
 
 .data-img img {
-  height: 82px;
+  height: 72px;
   border-radius: 4px;
   margin: 12px;
 }
 
 .data-content {
   padding: 12px 12px 12px 0;
+  /* margin: auto 0; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -476,7 +530,7 @@ header {
 .data-title {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .data-info {
@@ -490,12 +544,14 @@ header {
 }
 
 .data-feild {
-  font-size: 10px;
+  color: #7d7d7d;
+  font-size: 11px;
 }
 
 .data-icon {
   color: #cdcdcd;
-  padding: 2px 4px 2px 0 ;
+  font-size: 14px;
+  padding: 2px 4px 2px 0;
 }
 
 .data-feild span {
@@ -503,18 +559,130 @@ header {
   font-weight: 600;
 }
 
-.btn-pay{
+.btn-pay {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
   text-transform: uppercase;
   font-size: 12px;
-  margin:  0 12px 12px 0;
-  margin-left: auto ;
-  padding: 4px 16px;
+  margin: 0 12px 12px 0;
+  margin-left: auto;
+  padding: 6px 18px;
   background-color: #fca424;
   border-radius: 4px;
   color: #ffffff;
+}
+/* activity-sidebar */
+.activity-sidebar {
+  /* background-color: blueviolet; */
+  columns: 3/-1;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
+  padding: 0 12px;
+  height: 325px;
+  overflow-y: scroll;
+  padding: 12px;
+}
 
+.side-bar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 6px;
+}
+
+.activity-content {
+  display: grid;
+  grid-template-columns: 1fr 100fr;
+
+  column-gap: 12px;
+}
+
+.bulet-mark-blue {
+  position: relative;
+  grid-row: 1/-1;
+}
+
+.mark-blue::after {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.mark-orange::after {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #fca424;
+}
+.mark-aqua::after {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+.vl {
+  /* display: inline-block; */
+  position: absolute;
+  left: 6px;
+  top: 0;
+  margin: 0 auto;
+  height: 100px;
+  z-index: -1;
+
+  border: 1px solid rgba(205, 205, 205, 0.2);
+}
+
+.activity-title {
+  font-weight: 600;
+  font-size: 14px;
+
+  padding: 2px;
+}
+
+.activity-data {
+  grid-column: 2/-1;
+  padding: 2px;
+  font-size: 12px;
+  color: #7d7d7d;
+}
+
+.activity-time {
+  grid-column: 2/-1;
+  padding: 2px;
+  font-size: 12px;
+  color: #cdcdcd;
+}
+
+/* designing scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px; */
+
+  margin-block: 50%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fca424;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a46d19;
 }
