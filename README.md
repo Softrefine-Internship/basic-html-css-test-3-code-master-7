@@ -1,6 +1,6 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14349273&assignment_repo_type=AssignmentRepo)
 # Crowd Funding Dashboard
-
+ 
 ### Project Description
 
 The project requires you to create a web page that matches the provided design template. The design template consists of dashboard layout. Your task is to replicate the design as accurately as possible within the given time for desktop screen only.
