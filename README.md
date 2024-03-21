@@ -10,7 +10,7 @@ The project requires you to create a web page that matches the provided design t
 - #FCA424
 - #0DD39D
 - #1A1A1A
-- #CDCDCD
+- #CDCDCD 
 - #FEFEFE
 ### Technology Stack
 
