@@ -45,7 +45,7 @@ body {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(img/mountain.jpg);
+    url(img/mountain.webp);
   background-position: contain;
   background-size: cover;
   padding: 14px 32px;
