@@ -27,10 +27,14 @@ body {
   font-family: sans-serif;
   background-size: cover;
   /* width: 1200px; */
-  height: 100vh;
+  /* height: 100vh; */
   /* overflow: hidden; */
   padding: 32px 0;
   z-index: -3;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .container {
@@ -44,9 +48,9 @@ body {
 }
 
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(img/mountain.webp);
-  background-position: contain;
+  background-image: linear-gradient(to right ,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+  url(img/mountain.webp);
+  background-position: center center;
   background-size: cover;
   padding: 14px 32px;
   padding-bottom: 4px;
@@ -83,9 +87,26 @@ header {
   text-transform: uppercase;
 }
 
+.need-help-btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .notification-btn {
   background: none;
   border: none;
+  position: relative;
+}
+
+.notification-alert::after {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #e1bd6c;
+  border-radius: 50%;
 }
 
 .icon-notify {
@@ -94,9 +115,18 @@ header {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.icon-notify:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .profile-btn {
   height: 24px;
-  border-radius: 50%;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.profile-btn:hover {
+  transform: scale(1.2);
 }
 
 .header-main {
@@ -161,6 +191,11 @@ header {
 
   opacity: 0.5;
 }
+.camera:hover {
+  color: #ffffff;
+
+  background-color: rgba(123, 123, 123, 0.7);
+}
 
 .icon-cam {
   transform: translate(0px, 2px);
@@ -202,29 +237,29 @@ header {
 
 /* Apply css properties to ui-widgets class 
   and ui-values class*/
-  .ui-widgets .ui-values {
-    display: block;
-    top: 5px;
-    position: absolute;
-    left: 5px;
-    right: 0;
-    font-weight: 700;
-    font-size: 12px;
-    transform: rotate(45deg);
-    background-color: rgba(205, 205, 205, 0.4);
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
+.ui-widgets .ui-values {
+  display: block;
+  top: 5px;
+  position: absolute;
+  left: 5px;
+  right: 0;
+  font-weight: 700;
+  font-size: 12px;
+  transform: rotate(45deg);
+  background-color: rgba(205, 205, 205, 0.4);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
 
 .ui-values span {
   position: absolute;
-  top: 21px;
-  left: 16px;
+  top: 50%;
+  left: 50%;
   font-size: 14px;
   font-weight: 100;
+  transform: translate(-50%, -50%);
 }
-
 .additional-info {
   font-size: 12px;
   display: flex;
@@ -251,6 +286,12 @@ header {
   display: inline-block;
   align-self: flex-end;
   margin-right: auto;
+
+  transition: all 0.2s;
+}
+
+.btn-complete:hover {
+  background-color: #f6ad3e;
 }
 
 /* Main body / Main */
@@ -284,16 +325,16 @@ header {
   box-shadow: inset 0 -1.8px 0 rgba(205, 205, 205, 0.5);
 }
 
-.option-btn{
-  color: #c6c6c6;
+.option-btn {
+  color: #bebebe;
 }
 
 /* family */
 .family-collection {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 12px 0 0 0;
+  gap: 18px;
+  padding: 18px 0 0 0;
 }
 
 .family {
@@ -309,11 +350,11 @@ header {
 .family-img {
   display: flex;
   gap: 12px;
-  padding: 4px 0;
+  padding: 12px 0 0 0;
 }
 
 .family-img img {
-  height: 32px;
+  height: 38px;
   border-radius: 50%;
 }
 
@@ -322,7 +363,7 @@ header {
   flex-direction: column;
   font-size: 12px;
   font-weight: 500;
-  gap: 2px;
+  gap: 4px;
 }
 
 .detail-head {
@@ -333,9 +374,13 @@ header {
 }
 
 .detail-data {
-    font-weight: 600;
-    font-size: 10px;
-    color: #1a1a1a;
+  font-weight: 600;
+  font-size: 10px;
+  color: #1a1a1a;
+}
+
+.about-me {
+  margin-top: 12px;
 }
 
 .my-details {
@@ -362,7 +407,7 @@ header {
 /* Body nav */
 .body-nav {
   justify-content: space-between;
-  margin: 18px 0 8px 0;
+  margin: 8px 0 8px 0;
   padding: 0 32px 0 12px; /* done this so that line could reach end of the page ! and can't assign all margin to padding otherwise the active state will mesed up*/
   grid-column: 2/-1;
   display: flex;
@@ -370,11 +415,7 @@ header {
   align-items: center;
   color: #cdcdcd;
   text-transform: uppercase;
-  /* border-bottom: 2px solid #CDCDCD; */
   box-shadow: inset 0 -1.8px 0 rgba(205, 205, 205, 0.5);
-  /* padding-right: 32px; */
-
-  /* height: fit-content; */
 }
 
 .body-nav-element,
@@ -383,12 +424,13 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 10px;
-  padding: 0 0 18px 0;
-  font-weight: 600;
+  padding: 8px 0 16px 0;
+  font-weight: 790;
 }
 .body-nav-element-list {
   gap: 12px;
   padding-bottom: 0;
+  padding-top: 0;
 }
 
 .clam-btn {
@@ -401,13 +443,31 @@ header {
   padding: 5px 10px;
   color: #fefefe;
   font-size: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   align-items: center;
   justify-content: center;
   gap: 4px;
+
+  transition: all 0.2s;
+}
+
+.clam-btn:hover {
+  cursor: pointer;
+  background-color: #38e5b7;
+}
+
+.body-nav-element:hover {
+  cursor: pointer;
 }
 
 .body-nav-element.active-nav {
+  font-weight: 790;
+
+  color: #1a1a1a;
+  border-bottom: 2px solid #fca424;
+}
+
+.body-nav-element:hover:not(:first-child) {
   color: #1a1a1a;
   border-bottom: 2px solid #fca424;
 }
@@ -472,12 +532,11 @@ header {
 
   margin-top: auto;
 }
-
 .card-images img {
-  height: 24px;
+  height: 28px;
   border-radius: 50%;
-  margin-right: -12px;
-  border: 1px solid #c6c6c6;
+  margin-right: -8px;
+  border: 2px solid #fff;
 }
 
 .overlay-image {
@@ -486,12 +545,11 @@ header {
 
 .overlay-text {
   position: absolute;
-  top: 0;
-  left: -12px;
-  height: 24px;
-  width: 24px;
+  top: 1px;
+  left: -19px;
+  height: 26px;
+  width: 26px;
   background-color: #0dd39d;
-
   opacity: 0.6;
   color: #ffffff;
   border-radius: 50%;
@@ -500,7 +558,7 @@ header {
 .overlay-text span {
   display: inline-block;
   font-size: 12px;
-  transform: translate(10%, 10%);
+  transform: translate(12%, 22%);
 }
 
 .body-main-content {
@@ -522,7 +580,7 @@ header {
 }
 
 .data-img img {
-  height: 72px;
+  height: 82px;
   border-radius: 4px;
   margin: 12px;
 }
@@ -545,6 +603,10 @@ header {
   display: flex;
   align-items: center;
   /* padding: 4px 8px; */
+}
+
+.data-info{
+  margin-top: 4px;
 }
 
 .flex-end {
@@ -580,17 +642,22 @@ header {
   background-color: #fca424;
   border-radius: 4px;
   color: #ffffff;
+  transition: all 0.2s;
 }
+
+.btn-pay:hover {
+  background-color: rgb(242, 185, 99);
+}
+
 /* activity-sidebar */
 .activity-sidebar {
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.05); 
-  height: 325px;
-  overflow-y: scroll;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
+  height: fit-content;
   padding: 12px;
   padding-top: 0;
 }
 
-.activity-sidebar .side-bar-title{
+.activity-sidebar .side-bar-title {
   color: #cdcdcd;
 }
 
@@ -599,62 +666,123 @@ header {
   flex-direction: column;
   gap: 6px;
   padding-top: 6px;
+  height: 304px;
+  overflow-y: scroll;
 }
 
 .activity-content {
   display: grid;
   grid-template-columns: 1fr 100fr;
 
-  column-gap: 12px;
+  column-gap: 18px;
 }
 
 .bulet-mark-blue {
   position: relative;
   grid-row: 1/-1;
 }
-
 .mark-blue::after {
   content: "";
   display: inline-block;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
   background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(24%, -50%);
+  z-index: 3;
 }
 
-.mark-orange::after {
+.mark-blue::before {
+  position: absolute;
   content: "";
   display: inline-block;
   height: 12px;
   width: 12px;
   border-radius: 50%;
+  background-color: rgba(80, 155, 253, 0.5);
+  filter: blur(1px);
+  top: 50%;
+  left: 50%;
+  transform: translate(1%, -50%);
+  z-index: 2;
+}
+.mark-orange::after {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
   background-color: #fca424;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(24%, -50%);
+  z-index: 3;
+}
+
+.mark-orange::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: rgba(244, 183, 93, 0.5);
+  filter: blur(1px);
+  top: 50%;
+  left: 50%;
+  transform: translate(1%, -50%);
+  z-index: 2;
 }
 .mark-aqua::after {
   content: "";
   display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: aqua;
+  /* box-shadow: 0 0 2px rgb(125, 251, 245); this was also the way */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(24%, -50%);
+  z-index: 3;
+}
+
+.mark-aqua::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: rgba(110, 235, 235, 0.5);
+  filter: blur(1px);
+  top: 50%;
+  left: 50%;
+  transform: translate(1%, -50%);
+  z-index: 2;
 }
 
 .vl {
-  /* display: inline-block; */
+  display: inline-block;
   position: absolute;
   left: 6px;
-  top: 0;
+  top: 6px;
   margin: 0 auto;
   height: 100px;
-  z-index: -1;
+  z-index: 1;
 
   border: 1px solid rgba(205, 205, 205, 0.2);
 }
 
 .activity-title {
   font-weight: 600;
-  font-size: 14px;
-
+  font-size: 12px;
+  color: #7d7d7d;
   padding: 2px;
 }
 
